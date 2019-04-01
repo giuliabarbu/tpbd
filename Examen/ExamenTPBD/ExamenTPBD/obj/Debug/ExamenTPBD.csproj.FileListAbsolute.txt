@@ -1,0 +1,11 @@
+C:\Users\Giulia\Documents\Examen\ExamenTPBD\ExamenTPBD\obj\Debug\ExamenTPBD.csprojAssemblyReference.cache
+C:\Users\Giulia\Documents\Examen\ExamenTPBD\ExamenTPBD\obj\Debug\ExamenTPBD.Form1.resources
+C:\Users\Giulia\Documents\Examen\ExamenTPBD\ExamenTPBD\obj\Debug\ExamenTPBD.Properties.Resources.resources
+C:\Users\Giulia\Documents\Examen\ExamenTPBD\ExamenTPBD\obj\Debug\ExamenTPBD.csproj.GenerateResource.cache
+C:\Users\Giulia\Documents\Examen\ExamenTPBD\ExamenTPBD\obj\Debug\ExamenTPBD.csproj.CoreCompileInputs.cache
+C:\Users\Giulia\Documents\Examen\ExamenTPBD\ExamenTPBD\bin\Debug\ExamenTPBD.exe.config
+C:\Users\Giulia\Documents\Examen\ExamenTPBD\ExamenTPBD\bin\Debug\ExamenTPBD.exe
+C:\Users\Giulia\Documents\Examen\ExamenTPBD\ExamenTPBD\bin\Debug\ExamenTPBD.pdb
+C:\Users\Giulia\Documents\Examen\ExamenTPBD\ExamenTPBD\obj\Debug\ExamenTPBD.exe
+C:\Users\Giulia\Documents\Examen\ExamenTPBD\ExamenTPBD\obj\Debug\ExamenTPBD.pdb
+C:\Users\Giulia\Documents\Examen\ExamenTPBD\ExamenTPBD\obj\Debug\ExamenTPBD.Parola.resources
