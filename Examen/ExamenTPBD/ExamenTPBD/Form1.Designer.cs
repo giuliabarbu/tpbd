@@ -109,6 +109,17 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.tabPage8 = new System.Windows.Forms.TabPage();
+            this.bindingNavigator2 = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorCountItem1 = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorMoveFirstItem1 = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMovePreviousItem1 = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorPositionItem1 = new System.Windows.Forms.ToolStripTextBox();
+            this.bindingNavigatorSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorMoveNextItem1 = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMoveLastItem1 = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorSeparator5 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
             this.mesajCautareStergere = new System.Windows.Forms.Label();
             this.cautarePentruStergereButton = new System.Windows.Forms.Button();
             this.stergerePrenumeText = new System.Windows.Forms.TextBox();
@@ -180,18 +191,14 @@
             this.salariiTableAdapter = new ExamenTPBD.AngajatiDataSet2TableAdapters.SalariiTableAdapter();
             this.stergereTableAdapter = new ExamenTPBD.AngajatiDataSet1TableAdapters.SalariiTableAdapter();
             this.actualizareTableAdapter = new ExamenTPBD.AngajatiDataSetTableAdapters.SalariiTableAdapter();
-            this.bindingNavigatorMoveFirstItem1 = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMovePreviousItem1 = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorPositionItem1 = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem1 = new System.Windows.Forms.ToolStripLabel();
-            this.bindingNavigatorSeparator4 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorMoveNextItem1 = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveLastItem1 = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorSeparator5 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigator2 = new System.Windows.Forms.BindingNavigator(this.components);
+            this.label9 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabControl2.SuspendLayout();
             this.tabPage5.SuspendLayout();
@@ -206,6 +213,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.updateDataGridView)).BeginInit();
             this.tabPage6.SuspendLayout();
             this.tabPage8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator2)).BeginInit();
+            this.bindingNavigator2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.stergereDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.stergereBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.angajatiDataSet1)).BeginInit();
@@ -219,8 +228,6 @@
             this.tabControl3.SuspendLayout();
             this.tabPage10.SuspendLayout();
             this.tabPage4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator2)).BeginInit();
-            this.bindingNavigator2.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -239,6 +246,12 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.label29);
+            this.tabPage1.Controls.Add(this.label28);
+            this.tabPage1.Controls.Add(this.label27);
+            this.tabPage1.Controls.Add(this.label26);
+            this.tabPage1.Controls.Add(this.label17);
+            this.tabPage1.Controls.Add(this.label9);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -334,6 +347,7 @@
             this.updatePremiiText.Name = "updatePremiiText";
             this.updatePremiiText.Size = new System.Drawing.Size(100, 20);
             this.updatePremiiText.TabIndex = 18;
+            this.updatePremiiText.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.updatePremiiText_KeyPress);
             // 
             // label24
             // 
@@ -360,6 +374,7 @@
             this.updateRetineriText.Name = "updateRetineriText";
             this.updateRetineriText.Size = new System.Drawing.Size(100, 20);
             this.updateRetineriText.TabIndex = 13;
+            this.updateRetineriText.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.updateRetineriText_KeyPress);
             // 
             // updateSporText
             // 
@@ -367,6 +382,7 @@
             this.updateSporText.Name = "updateSporText";
             this.updateSporText.Size = new System.Drawing.Size(100, 20);
             this.updateSporText.TabIndex = 12;
+            this.updateSporText.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.updateSporText_KeyPress);
             // 
             // updateSalarText
             // 
@@ -374,6 +390,7 @@
             this.updateSalarText.Name = "updateSalarText";
             this.updateSalarText.Size = new System.Drawing.Size(100, 20);
             this.updateSalarText.TabIndex = 11;
+            this.updateSalarText.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.updateSalarText_KeyPress);
             // 
             // updateFunctieText
             // 
@@ -381,6 +398,7 @@
             this.updateFunctieText.Name = "updateFunctieText";
             this.updateFunctieText.Size = new System.Drawing.Size(100, 20);
             this.updateFunctieText.TabIndex = 10;
+            this.updateFunctieText.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.updateFunctieText_KeyPress);
             // 
             // updatePrenumeText
             // 
@@ -388,6 +406,7 @@
             this.updatePrenumeText.Name = "updatePrenumeText";
             this.updatePrenumeText.Size = new System.Drawing.Size(100, 20);
             this.updatePrenumeText.TabIndex = 9;
+            this.updatePrenumeText.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.updatePrenumeText_KeyPress);
             // 
             // updateNumeText
             // 
@@ -395,6 +414,7 @@
             this.updateNumeText.Name = "updateNumeText";
             this.updateNumeText.Size = new System.Drawing.Size(100, 20);
             this.updateNumeText.TabIndex = 8;
+            this.updateNumeText.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.updateNumeText_KeyPress);
             // 
             // label8
             // 
@@ -489,6 +509,7 @@
             this.cautarePrenumeText.Name = "cautarePrenumeText";
             this.cautarePrenumeText.Size = new System.Drawing.Size(100, 20);
             this.cautarePrenumeText.TabIndex = 3;
+            this.cautarePrenumeText.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cautarePrenumeText_KeyPress);
             // 
             // cautareNumeText
             // 
@@ -496,6 +517,7 @@
             this.cautareNumeText.Name = "cautareNumeText";
             this.cautareNumeText.Size = new System.Drawing.Size(100, 20);
             this.cautareNumeText.TabIndex = 2;
+            this.cautareNumeText.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cautareNumeText_KeyPress);
             // 
             // label2
             // 
@@ -961,6 +983,110 @@
             this.tabPage8.TabIndex = 2;
             this.tabPage8.Text = "Stergere angajati";
             this.tabPage8.UseVisualStyleBackColor = true;
+            // 
+            // bindingNavigator2
+            // 
+            this.bindingNavigator2.AddNewItem = null;
+            this.bindingNavigator2.CountItem = this.bindingNavigatorCountItem1;
+            this.bindingNavigator2.DeleteItem = null;
+            this.bindingNavigator2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.bindingNavigatorMoveFirstItem1,
+            this.bindingNavigatorMovePreviousItem1,
+            this.bindingNavigatorSeparator3,
+            this.bindingNavigatorPositionItem1,
+            this.bindingNavigatorCountItem1,
+            this.bindingNavigatorSeparator4,
+            this.bindingNavigatorMoveNextItem1,
+            this.bindingNavigatorMoveLastItem1,
+            this.bindingNavigatorSeparator5,
+            this.toolStripButton3});
+            this.bindingNavigator2.Location = new System.Drawing.Point(0, 0);
+            this.bindingNavigator2.MoveFirstItem = this.bindingNavigatorMoveFirstItem1;
+            this.bindingNavigator2.MoveLastItem = this.bindingNavigatorMoveLastItem1;
+            this.bindingNavigator2.MoveNextItem = this.bindingNavigatorMoveNextItem1;
+            this.bindingNavigator2.MovePreviousItem = this.bindingNavigatorMovePreviousItem1;
+            this.bindingNavigator2.Name = "bindingNavigator2";
+            this.bindingNavigator2.PositionItem = this.bindingNavigatorPositionItem1;
+            this.bindingNavigator2.Size = new System.Drawing.Size(1071, 25);
+            this.bindingNavigator2.TabIndex = 7;
+            this.bindingNavigator2.Text = "bindingNavigator2";
+            // 
+            // bindingNavigatorCountItem1
+            // 
+            this.bindingNavigatorCountItem1.Name = "bindingNavigatorCountItem1";
+            this.bindingNavigatorCountItem1.Size = new System.Drawing.Size(35, 22);
+            this.bindingNavigatorCountItem1.Text = "of {0}";
+            this.bindingNavigatorCountItem1.ToolTipText = "Total number of items";
+            // 
+            // bindingNavigatorMoveFirstItem1
+            // 
+            this.bindingNavigatorMoveFirstItem1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveFirstItem1.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem1.Image")));
+            this.bindingNavigatorMoveFirstItem1.Name = "bindingNavigatorMoveFirstItem1";
+            this.bindingNavigatorMoveFirstItem1.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveFirstItem1.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveFirstItem1.Text = "Move first";
+            // 
+            // bindingNavigatorMovePreviousItem1
+            // 
+            this.bindingNavigatorMovePreviousItem1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMovePreviousItem1.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem1.Image")));
+            this.bindingNavigatorMovePreviousItem1.Name = "bindingNavigatorMovePreviousItem1";
+            this.bindingNavigatorMovePreviousItem1.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMovePreviousItem1.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMovePreviousItem1.Text = "Move previous";
+            // 
+            // bindingNavigatorSeparator3
+            // 
+            this.bindingNavigatorSeparator3.Name = "bindingNavigatorSeparator3";
+            this.bindingNavigatorSeparator3.Size = new System.Drawing.Size(6, 25);
+            // 
+            // bindingNavigatorPositionItem1
+            // 
+            this.bindingNavigatorPositionItem1.AccessibleName = "Position";
+            this.bindingNavigatorPositionItem1.AutoSize = false;
+            this.bindingNavigatorPositionItem1.Name = "bindingNavigatorPositionItem1";
+            this.bindingNavigatorPositionItem1.Size = new System.Drawing.Size(50, 23);
+            this.bindingNavigatorPositionItem1.Text = "0";
+            this.bindingNavigatorPositionItem1.ToolTipText = "Current position";
+            // 
+            // bindingNavigatorSeparator4
+            // 
+            this.bindingNavigatorSeparator4.Name = "bindingNavigatorSeparator4";
+            this.bindingNavigatorSeparator4.Size = new System.Drawing.Size(6, 25);
+            // 
+            // bindingNavigatorMoveNextItem1
+            // 
+            this.bindingNavigatorMoveNextItem1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveNextItem1.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem1.Image")));
+            this.bindingNavigatorMoveNextItem1.Name = "bindingNavigatorMoveNextItem1";
+            this.bindingNavigatorMoveNextItem1.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveNextItem1.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveNextItem1.Text = "Move next";
+            // 
+            // bindingNavigatorMoveLastItem1
+            // 
+            this.bindingNavigatorMoveLastItem1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveLastItem1.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem1.Image")));
+            this.bindingNavigatorMoveLastItem1.Name = "bindingNavigatorMoveLastItem1";
+            this.bindingNavigatorMoveLastItem1.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveLastItem1.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveLastItem1.Text = "Move last";
+            // 
+            // bindingNavigatorSeparator5
+            // 
+            this.bindingNavigatorSeparator5.Name = "bindingNavigatorSeparator5";
+            this.bindingNavigatorSeparator5.Size = new System.Drawing.Size(6, 25);
+            // 
+            // toolStripButton3
+            // 
+            this.toolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
+            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton3.Name = "toolStripButton3";
+            this.toolStripButton3.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton3.Text = "toolStripButton3";
+            this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
             // 
             // mesajCautareStergere
             // 
@@ -1486,6 +1612,7 @@
             this.modificareImpozitText.Name = "modificareImpozitText";
             this.modificareImpozitText.Size = new System.Drawing.Size(100, 20);
             this.modificareImpozitText.TabIndex = 5;
+            this.modificareImpozitText.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.modificareImpozitText_KeyPress);
             // 
             // modificareCassText
             // 
@@ -1493,6 +1620,7 @@
             this.modificareCassText.Name = "modificareCassText";
             this.modificareCassText.Size = new System.Drawing.Size(100, 20);
             this.modificareCassText.TabIndex = 4;
+            this.modificareCassText.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.modificareCassText_KeyPress);
             // 
             // modificareCasText
             // 
@@ -1500,6 +1628,7 @@
             this.modificareCasText.Name = "modificareCasText";
             this.modificareCasText.Size = new System.Drawing.Size(100, 20);
             this.modificareCasText.TabIndex = 3;
+            this.modificareCasText.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.modificareCasText_KeyPress);
             // 
             // label22
             // 
@@ -1554,109 +1683,63 @@
             // 
             this.actualizareTableAdapter.ClearBeforeFill = true;
             // 
-            // bindingNavigatorMoveFirstItem1
+            // label9
             // 
-            this.bindingNavigatorMoveFirstItem1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveFirstItem1.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem1.Image")));
-            this.bindingNavigatorMoveFirstItem1.Name = "bindingNavigatorMoveFirstItem1";
-            this.bindingNavigatorMoveFirstItem1.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem1.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveFirstItem1.Text = "Move first";
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(22, 39);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(537, 13);
+            this.label9.TabIndex = 0;
+            this.label9.Text = "Aplicatia permite adaugarea unui nou angajat prin introducerea datelor si apasare" +
+    "a butonului \"Adaugare pacient\"";
             // 
-            // bindingNavigatorMovePreviousItem1
+            // label17
             // 
-            this.bindingNavigatorMovePreviousItem1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMovePreviousItem1.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem1.Image")));
-            this.bindingNavigatorMovePreviousItem1.Name = "bindingNavigatorMovePreviousItem1";
-            this.bindingNavigatorMovePreviousItem1.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem1.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMovePreviousItem1.Text = "Move previous";
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(25, 83);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(874, 13);
+            this.label17.TabIndex = 1;
+            this.label17.Text = "Permite actualizarea datelor unui singur angajat prin completarea campurilor si a" +
+    "pasarea butonului \"Actualizare date\", dar si modificarea datelor mai dintr-un ta" +
+    "bel cu toti angajatii existenti";
             // 
-            // bindingNavigatorSeparator3
+            // label26
             // 
-            this.bindingNavigatorSeparator3.Name = "bindingNavigatorSeparator3";
-            this.bindingNavigatorSeparator3.Size = new System.Drawing.Size(6, 25);
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(25, 134);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(372, 13);
+            this.label26.TabIndex = 2;
+            this.label26.Text = "Permite stergerea  unui angajat cautat in baza de date dupa nume si prenume";
             // 
-            // bindingNavigatorPositionItem1
+            // label27
             // 
-            this.bindingNavigatorPositionItem1.AccessibleName = "Position";
-            this.bindingNavigatorPositionItem1.AutoSize = false;
-            this.bindingNavigatorPositionItem1.Name = "bindingNavigatorPositionItem1";
-            this.bindingNavigatorPositionItem1.Size = new System.Drawing.Size(50, 23);
-            this.bindingNavigatorPositionItem1.Text = "0";
-            this.bindingNavigatorPositionItem1.ToolTipText = "Current position";
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(28, 189);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(348, 13);
+            this.label27.TabIndex = 3;
+            this.label27.Text = "Permite calculul tuturor salariilor dupa ce s-au efectuat anumite modificari";
             // 
-            // bindingNavigatorCountItem1
+            // label28
             // 
-            this.bindingNavigatorCountItem1.Name = "bindingNavigatorCountItem1";
-            this.bindingNavigatorCountItem1.Size = new System.Drawing.Size(35, 22);
-            this.bindingNavigatorCountItem1.Text = "of {0}";
-            this.bindingNavigatorCountItem1.ToolTipText = "Total number of items";
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(31, 235);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(352, 13);
+            this.label28.TabIndex = 4;
+            this.label28.Text = "Permite tiparirea unor rapoarte: stat de plata si fluturasi pentru fiecare luna";
             // 
-            // bindingNavigatorSeparator4
+            // label29
             // 
-            this.bindingNavigatorSeparator4.Name = "bindingNavigatorSeparator4";
-            this.bindingNavigatorSeparator4.Size = new System.Drawing.Size(6, 25);
-            // 
-            // bindingNavigatorMoveNextItem1
-            // 
-            this.bindingNavigatorMoveNextItem1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveNextItem1.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem1.Image")));
-            this.bindingNavigatorMoveNextItem1.Name = "bindingNavigatorMoveNextItem1";
-            this.bindingNavigatorMoveNextItem1.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem1.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveNextItem1.Text = "Move next";
-            // 
-            // bindingNavigatorMoveLastItem1
-            // 
-            this.bindingNavigatorMoveLastItem1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveLastItem1.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem1.Image")));
-            this.bindingNavigatorMoveLastItem1.Name = "bindingNavigatorMoveLastItem1";
-            this.bindingNavigatorMoveLastItem1.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem1.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveLastItem1.Text = "Move last";
-            // 
-            // bindingNavigatorSeparator5
-            // 
-            this.bindingNavigatorSeparator5.Name = "bindingNavigatorSeparator5";
-            this.bindingNavigatorSeparator5.Size = new System.Drawing.Size(6, 25);
-            // 
-            // toolStripButton3
-            // 
-            this.toolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
-            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton3.Text = "toolStripButton3";
-            this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
-            // 
-            // bindingNavigator2
-            // 
-            this.bindingNavigator2.AddNewItem = null;
-            this.bindingNavigator2.CountItem = this.bindingNavigatorCountItem1;
-            this.bindingNavigator2.DeleteItem = null;
-            this.bindingNavigator2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.bindingNavigatorMoveFirstItem1,
-            this.bindingNavigatorMovePreviousItem1,
-            this.bindingNavigatorSeparator3,
-            this.bindingNavigatorPositionItem1,
-            this.bindingNavigatorCountItem1,
-            this.bindingNavigatorSeparator4,
-            this.bindingNavigatorMoveNextItem1,
-            this.bindingNavigatorMoveLastItem1,
-            this.bindingNavigatorSeparator5,
-            this.toolStripButton3});
-            this.bindingNavigator2.Location = new System.Drawing.Point(0, 0);
-            this.bindingNavigator2.MoveFirstItem = this.bindingNavigatorMoveFirstItem1;
-            this.bindingNavigator2.MoveLastItem = this.bindingNavigatorMoveLastItem1;
-            this.bindingNavigator2.MoveNextItem = this.bindingNavigatorMoveNextItem1;
-            this.bindingNavigator2.MovePreviousItem = this.bindingNavigatorMovePreviousItem1;
-            this.bindingNavigator2.Name = "bindingNavigator2";
-            this.bindingNavigator2.PositionItem = this.bindingNavigatorPositionItem1;
-            this.bindingNavigator2.Size = new System.Drawing.Size(1071, 25);
-            this.bindingNavigator2.TabIndex = 7;
-            this.bindingNavigator2.Text = "bindingNavigator2";
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(34, 294);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(689, 13);
+            this.label29.TabIndex = 5;
+            this.label29.Text = "Permite modificarea procentelor pentru CAS, CASS si IMPOZITUL, accesul la date fa" +
+    "candu-se prin introducerea unei parole in casuta respectiva.";
             // 
             // Form1
             // 
@@ -1668,6 +1751,8 @@
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.tabControl1.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabControl2.ResumeLayout(false);
             this.tabPage5.ResumeLayout(false);
@@ -1688,6 +1773,9 @@
             this.tabPage6.PerformLayout();
             this.tabPage8.ResumeLayout(false);
             this.tabPage8.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator2)).EndInit();
+            this.bindingNavigator2.ResumeLayout(false);
+            this.bindingNavigator2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.stergereDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.stergereBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.angajatiDataSet1)).EndInit();
@@ -1704,9 +1792,6 @@
             this.tabPage10.ResumeLayout(false);
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator2)).EndInit();
-            this.bindingNavigator2.ResumeLayout(false);
-            this.bindingNavigator2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1874,6 +1959,12 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem1;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator5;
         private System.Windows.Forms.ToolStripButton toolStripButton3;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label9;
     }
 }
 

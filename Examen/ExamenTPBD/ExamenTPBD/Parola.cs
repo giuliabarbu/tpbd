@@ -48,5 +48,11 @@ namespace ExamenTPBD
         {
             get { return enableTextBox; }
         }
+
+        private void parolaTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar == '\r'))
+                parolaButton_Click(null, null);
+        }
     }
 }

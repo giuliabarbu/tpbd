@@ -49,6 +49,7 @@
             this.parolaTextBox.PasswordChar = '*';
             this.parolaTextBox.Size = new System.Drawing.Size(164, 20);
             this.parolaTextBox.TabIndex = 1;
+            this.parolaTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.parolaTextBox_KeyPress);
             // 
             // parolaButton
             // 

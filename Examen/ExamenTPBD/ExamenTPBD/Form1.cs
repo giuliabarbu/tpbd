@@ -44,6 +44,12 @@ namespace ExamenTPBD
                 }                            
                
             }
+
+            if (tabControl1.SelectedTab == tabPage7)
+            {
+                Application.Exit();
+
+            }
         }
 
         private void tabControl2_SelectedIndexChanged(object sender, EventArgs e)
@@ -172,24 +178,33 @@ namespace ExamenTPBD
 
         private void adaugaNumeText_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((char.IsDigit(e.KeyChar)) && (!char.IsControl(e.KeyChar)))
+            if (!(char.IsLetter(e.KeyChar)) && (!char.IsControl(e.KeyChar)) && (e.KeyChar != '-'))
                 e.Handled = true;
         }
 
         private void adaugaPrenumeText_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((char.IsDigit(e.KeyChar)) && (!char.IsControl(e.KeyChar)))
+            if (!(char.IsLetter(e.KeyChar)) && (!char.IsControl(e.KeyChar)) && (e.KeyChar != '-'))
                 e.Handled = true;
         }
 
         private void adaugaFunctieText_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((char.IsDigit(e.KeyChar)) && (!char.IsControl(e.KeyChar)))
+            if (!(char.IsLetter(e.KeyChar)) && (!char.IsControl(e.KeyChar)) && (e.KeyChar != '-'))
                 e.Handled = true;
         }
-               
 
-        
+        private void cautareNumeText_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsLetter(e.KeyChar)) && (!char.IsControl(e.KeyChar)) && (e.KeyChar != '-'))
+                e.Handled = true;
+        }
+        private void cautarePrenumeText_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsLetter(e.KeyChar)) && (!char.IsControl(e.KeyChar)) && (e.KeyChar != '-'))
+                e.Handled = true;
+        }
+
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
@@ -215,6 +230,8 @@ namespace ExamenTPBD
 
         private void stergereNumeText_KeyPress(object sender, KeyPressEventArgs e)
         {
+            if (!(char.IsLetter(e.KeyChar)) && (!char.IsControl(e.KeyChar)) && (e.KeyChar != '-'))
+                e.Handled = true;
             if ((e.KeyChar == '\r'))
                 stergerePrenumeText.Focus();
         }
@@ -245,6 +262,8 @@ namespace ExamenTPBD
 
         private void stergerePrenumeText_KeyPress(object sender, KeyPressEventArgs e)
         {
+            if (!(char.IsLetter(e.KeyChar)) && (!char.IsControl(e.KeyChar)) && (e.KeyChar != '-'))
+                e.Handled = true;
             if ((e.KeyChar == '\r'))
                 cautarePentruStergereButton_Click(null, null);
         }
@@ -552,7 +571,65 @@ namespace ExamenTPBD
             rep.Show();
         }
 
-       
+        private void updateNumeText_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsLetter(e.KeyChar)) && (!char.IsControl(e.KeyChar)) && (e.KeyChar != '-'))
+                e.Handled = true;
+        }
+
+        private void updatePrenumeText_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsLetter(e.KeyChar)) && (!char.IsControl(e.KeyChar)) && (e.KeyChar != '-'))
+                e.Handled = true;
+        }
+
+        private void updateFunctieText_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsLetter(e.KeyChar)) && (!char.IsControl(e.KeyChar))  && (e.KeyChar != '-'))
+                e.Handled = true;
+        }
+
+        private void updateSalarText_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((!char.IsNumber(e.KeyChar)) & (!char.IsControl(e.KeyChar)))
+                e.Handled = true;
+        }
+
+        private void updateSporText_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((!char.IsNumber(e.KeyChar)) & (!char.IsControl(e.KeyChar)))
+                e.Handled = true;
+        }
+
+        private void updateRetineriText_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((!char.IsNumber(e.KeyChar)) & (!char.IsControl(e.KeyChar)))
+                e.Handled = true;
+        }
+
+        private void updatePremiiText_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((!char.IsNumber(e.KeyChar)) & (!char.IsControl(e.KeyChar)))
+                e.Handled = true;
+        }
+
+        private void modificareCasText_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((!char.IsNumber(e.KeyChar)) & (!char.IsControl(e.KeyChar)) && (e.KeyChar != '.'))
+                e.Handled = true;
+        }
+
+        private void modificareCassText_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((!char.IsNumber(e.KeyChar)) & (!char.IsControl(e.KeyChar)) && (e.KeyChar != '.'))
+                e.Handled = true;
+        }
+
+        private void modificareImpozitText_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((!char.IsNumber(e.KeyChar)) & (!char.IsControl(e.KeyChar)) && (e.KeyChar != '.'))
+                e.Handled = true;
+        }
     }
 }
 
