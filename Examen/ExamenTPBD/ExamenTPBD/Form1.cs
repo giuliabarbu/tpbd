@@ -70,6 +70,7 @@ namespace ExamenTPBD
             }
         }
 
+      
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -90,7 +91,7 @@ namespace ExamenTPBD
             //NUME="+ adaugaNumeText.Text+"and PRENUME="+adaugaPrenumeText.Text +"
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                int CAS, CASS, IMPOZIT;
+                double CAS, CASS, IMPOZIT;
                 int total_brut, cas_adaugat, cass_adaugat, brut_impozabil, impozit_adaugat, virat_card;
                 connection.Open();
                 using (SqlCommand command1 = new SqlCommand("SELECT * FROM Procente", connection))
@@ -98,15 +99,15 @@ namespace ExamenTPBD
                     SqlDataReader dr;
                     dr=command1.ExecuteReader();
                     dr.Read();
-                        CAS = Convert.ToInt32(dr["CAS"]);
-                        CASS = Convert.ToInt32(dr["CASS"]);
-                        IMPOZIT = Convert.ToInt32(dr["IMPOZIT"]);
+                        CAS = Convert.ToDouble(dr["CAS"]);
+                        CASS = Convert.ToDouble(dr["CASS"]);
+                        IMPOZIT = Convert.ToDouble(dr["IMPOZIT"]);
 
-                         total_brut = Convert.ToInt32(adaugaSalarText.Text) * (1 + Convert.ToInt32(adaugaSporText.Text) / 100) + Convert.ToInt32(adaugaPremiiText.Text);
-                         cas_adaugat = total_brut * CAS/100;
-                         cass_adaugat = total_brut * CASS/100;
+                         total_brut = Convert.ToInt32(Convert.ToInt32(adaugaSalarText.Text) * (1 + Convert.ToDouble(adaugaSporText.Text) / 100)) + Convert.ToInt32(adaugaPremiiText.Text);
+                         cas_adaugat = Convert.ToInt32(total_brut * CAS);
+                         cass_adaugat = Convert.ToInt32(total_brut * CASS);
                          brut_impozabil = total_brut - cas_adaugat - cass_adaugat;
-                         impozit_adaugat = brut_impozabil * IMPOZIT/100;
+                         impozit_adaugat = Convert.ToInt32(brut_impozabil * IMPOZIT);
                          virat_card = total_brut - impozit_adaugat - cas_adaugat - cass_adaugat - Convert.ToInt32(adaugaRetineriText.Text);
                     
 
@@ -363,7 +364,7 @@ namespace ExamenTPBD
                     try
                     {
                         connection.Open();
-                        using (SqlCommand command4 = new SqlCommand("UPDATE Procente SET CAS=" + Convert.ToInt32(modificareCasText.Text) + ",CASS=" + Convert.ToInt32(modificareCassText.Text) + ",IMPOZIT=" + Convert.ToInt32(modificareImpozitText.Text), connection))
+                        using (SqlCommand command4 = new SqlCommand("UPDATE Procente SET CAS=" + Convert.ToDouble(modificareCasText.Text) + ",CASS=" + Convert.ToDouble(modificareCassText.Text) + ",IMPOZIT=" + Convert.ToDouble(modificareImpozitText.Text), connection))
                         {
                             command4.ExecuteNonQuery();
                             mesajModificareProcente.ForeColor = System.Drawing.Color.Green;
@@ -418,7 +419,7 @@ namespace ExamenTPBD
             {
 
 
-                int CAS, CASS, IMPOZIT;
+                double CAS, CASS, IMPOZIT;
                 int total_brut, cas_adaugat, cass_adaugat, brut_impozabil, impozit_adaugat, virat_card;
                 connection.Open();
                 using (SqlCommand command1 = new SqlCommand("SELECT * FROM Procente", connection))
@@ -426,15 +427,15 @@ namespace ExamenTPBD
                     SqlDataReader dr;
                     dr = command1.ExecuteReader();
                     dr.Read();
-                    CAS = Convert.ToInt32(dr["CAS"]);
-                    CASS = Convert.ToInt32(dr["CASS"]);
-                    IMPOZIT = Convert.ToInt32(dr["IMPOZIT"]);
+                    CAS = Convert.ToDouble(dr["CAS"]);
+                    CASS = Convert.ToDouble(dr["CASS"]);
+                    IMPOZIT = Convert.ToDouble(dr["IMPOZIT"]);
 
-                    total_brut = Convert.ToInt32(updateSalarText.Text) * (1 + Convert.ToInt32(updateSporText.Text) / 100) + Convert.ToInt32(updatePremiiText.Text);
-                    cas_adaugat = total_brut * CAS / 100;
-                    cass_adaugat = total_brut * CASS / 100;
+                    total_brut = Convert.ToInt32(Convert.ToInt32(updateSalarText.Text) * (1 + Convert.ToDouble(updateSporText.Text) / 100)) + Convert.ToInt32(updatePremiiText.Text);
+                    cas_adaugat = Convert.ToInt32(total_brut * CAS);
+                    cass_adaugat = Convert.ToInt32(total_brut * CASS);
                     brut_impozabil = total_brut - cas_adaugat - cass_adaugat;
-                    impozit_adaugat = brut_impozabil * IMPOZIT / 100;
+                    impozit_adaugat = Convert.ToInt32(brut_impozabil * IMPOZIT);
                     virat_card = total_brut - impozit_adaugat - cas_adaugat - cass_adaugat - Convert.ToInt32(updateRetineriText.Text);
 
 
@@ -475,7 +476,7 @@ namespace ExamenTPBD
             {
 
 
-                int CAS, CASS, IMPOZIT;
+                double CAS, CASS, IMPOZIT;
                 int total_brut, cas_adaugat, cass_adaugat, brut_impozabil, impozit_adaugat, virat_card;
                 bool mesaj_calcule_efectuate=false;
                 connection.Open();
@@ -484,9 +485,9 @@ namespace ExamenTPBD
                     SqlDataReader dr;
                     dr = command1.ExecuteReader();
                     dr.Read();
-                    CAS = Convert.ToInt32(dr["CAS"]);
-                    CASS = Convert.ToInt32(dr["CASS"]);
-                    IMPOZIT = Convert.ToInt32(dr["IMPOZIT"]);
+                    CAS = Convert.ToDouble(dr["CAS"]);
+                    CASS = Convert.ToDouble(dr["CASS"]);
+                    IMPOZIT = Convert.ToDouble(dr["IMPOZIT"]);
 
 
 
@@ -499,11 +500,11 @@ namespace ExamenTPBD
                         dr1 = command.ExecuteReader();
                         while (dr1.Read())
                         {
-                            total_brut = Convert.ToInt32(dr1["SALARIU_BAZA"].ToString()) * (1 + Convert.ToInt32(dr1["SPOR"].ToString()) / 100) + Convert.ToInt32(dr1["PREMII_BRUTE"].ToString());
-                            cas_adaugat = total_brut * CAS / 100;
-                            cass_adaugat = total_brut * CASS / 100;
+                            total_brut = Convert.ToInt32(Convert.ToInt32(dr1["SALARIU_BAZA"].ToString()) * (1 + Convert.ToDouble(dr1["SPOR"].ToString()) / 100)) + Convert.ToInt32(dr1["PREMII_BRUTE"].ToString());
+                            cas_adaugat = Convert.ToInt32(total_brut * CAS);
+                            cass_adaugat = Convert.ToInt32(total_brut * CASS);
                             brut_impozabil = total_brut - cas_adaugat - cass_adaugat;
-                            impozit_adaugat = brut_impozabil * IMPOZIT / 100;
+                            impozit_adaugat = Convert.ToInt32(brut_impozabil * IMPOZIT);
                             virat_card = total_brut - impozit_adaugat - cas_adaugat - cass_adaugat - Convert.ToInt32(dr1["RETINERI"].ToString());
 
                             try
@@ -544,6 +545,14 @@ namespace ExamenTPBD
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Report rep = new Report();
+            rep.Show();
+        }
+
+       
     }
 }
 

@@ -62,6 +62,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage13 = new System.Windows.Forms.TabPage();
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
+            this.actualizareBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.angajatiDataSet = new ExamenTPBD.AngajatiDataSet();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
@@ -74,6 +76,20 @@
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.updateDataGridView = new System.Windows.Forms.DataGridView();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nUMEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pRENUMEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fUNCTIEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sALARIUBAZADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sPORDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pREMIIBRUTEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rETINERIDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TOTAL_BRUT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BRUT_IMPOZABIL = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IMPOZIT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CAS = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CASS = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.VIRAT_CARD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.label23 = new System.Windows.Forms.Label();
             this.vizualizareAngajati = new System.Windows.Forms.ListBox();
@@ -93,19 +109,6 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.tabPage8 = new System.Windows.Forms.TabPage();
-            this.bindingNavigator2 = new System.Windows.Forms.BindingNavigator(this.components);
-            this.bindingNavigatorAddNewItem1 = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorCountItem1 = new System.Windows.Forms.ToolStripLabel();
-            this.bindingNavigatorDeleteItem1 = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveFirstItem1 = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMovePreviousItem1 = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorPositionItem1 = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorSeparator4 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorMoveNextItem1 = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveLastItem1 = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorSeparator5 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
             this.mesajCautareStergere = new System.Windows.Forms.Label();
             this.cautarePentruStergereButton = new System.Windows.Forms.Button();
             this.stergerePrenumeText = new System.Windows.Forms.TextBox();
@@ -160,6 +163,7 @@
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabControl3 = new System.Windows.Forms.TabControl();
             this.tabPage10 = new System.Windows.Forms.TabPage();
+            this.button1 = new System.Windows.Forms.Button();
             this.tabPage11 = new System.Windows.Forms.TabPage();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.mesajModificareProcente = new System.Windows.Forms.Label();
@@ -175,23 +179,18 @@
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.salariiTableAdapter = new ExamenTPBD.AngajatiDataSet2TableAdapters.SalariiTableAdapter();
             this.stergereTableAdapter = new ExamenTPBD.AngajatiDataSet1TableAdapters.SalariiTableAdapter();
-            this.actualizareBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.angajatiDataSet = new ExamenTPBD.AngajatiDataSet();
             this.actualizareTableAdapter = new ExamenTPBD.AngajatiDataSetTableAdapters.SalariiTableAdapter();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nUMEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pRENUMEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fUNCTIEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sALARIUBAZADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sPORDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pREMIIBRUTEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rETINERIDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TOTAL_BRUT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BRUT_IMPOZABIL = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.IMPOZIT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CAS = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CASS = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.VIRAT_CARD = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bindingNavigatorMoveFirstItem1 = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMovePreviousItem1 = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorPositionItem1 = new System.Windows.Forms.ToolStripTextBox();
+            this.bindingNavigatorCountItem1 = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorMoveNextItem1 = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMoveLastItem1 = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorSeparator5 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigator2 = new System.Windows.Forms.BindingNavigator(this.components);
             this.tabControl1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabControl2.SuspendLayout();
@@ -202,11 +201,11 @@
             this.tabPage13.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.actualizareBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.angajatiDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.updateDataGridView)).BeginInit();
             this.tabPage6.SuspendLayout();
             this.tabPage8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator2)).BeginInit();
-            this.bindingNavigator2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.stergereDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.stergereBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.angajatiDataSet1)).BeginInit();
@@ -218,9 +217,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.angajatiDataSet2)).BeginInit();
             this.tabPage3.SuspendLayout();
             this.tabControl3.SuspendLayout();
+            this.tabPage10.SuspendLayout();
             this.tabPage4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.actualizareBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.angajatiDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator2)).BeginInit();
+            this.bindingNavigator2.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -556,6 +556,16 @@
             this.bindingNavigator1.TabIndex = 1;
             this.bindingNavigator1.Text = "bindingNavigator1";
             // 
+            // actualizareBindingSource
+            // 
+            this.actualizareBindingSource.DataMember = "Salarii";
+            this.actualizareBindingSource.DataSource = this.angajatiDataSet;
+            // 
+            // angajatiDataSet
+            // 
+            this.angajatiDataSet.DataSetName = "AngajatiDataSet";
+            this.angajatiDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
@@ -669,6 +679,97 @@
             this.updateDataGridView.Name = "updateDataGridView";
             this.updateDataGridView.Size = new System.Drawing.Size(1051, 431);
             this.updateDataGridView.TabIndex = 0;
+            // 
+            // ID
+            // 
+            this.ID.DataPropertyName = "ID";
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            // 
+            // nUMEDataGridViewTextBoxColumn
+            // 
+            this.nUMEDataGridViewTextBoxColumn.DataPropertyName = "NUME";
+            this.nUMEDataGridViewTextBoxColumn.HeaderText = "NUME";
+            this.nUMEDataGridViewTextBoxColumn.Name = "nUMEDataGridViewTextBoxColumn";
+            // 
+            // pRENUMEDataGridViewTextBoxColumn
+            // 
+            this.pRENUMEDataGridViewTextBoxColumn.DataPropertyName = "PRENUME";
+            this.pRENUMEDataGridViewTextBoxColumn.HeaderText = "PRENUME";
+            this.pRENUMEDataGridViewTextBoxColumn.Name = "pRENUMEDataGridViewTextBoxColumn";
+            // 
+            // fUNCTIEDataGridViewTextBoxColumn
+            // 
+            this.fUNCTIEDataGridViewTextBoxColumn.DataPropertyName = "FUNCTIE";
+            this.fUNCTIEDataGridViewTextBoxColumn.HeaderText = "FUNCTIE";
+            this.fUNCTIEDataGridViewTextBoxColumn.Name = "fUNCTIEDataGridViewTextBoxColumn";
+            // 
+            // sALARIUBAZADataGridViewTextBoxColumn
+            // 
+            this.sALARIUBAZADataGridViewTextBoxColumn.DataPropertyName = "SALARIU_BAZA";
+            this.sALARIUBAZADataGridViewTextBoxColumn.HeaderText = "SALARIU_BAZA";
+            this.sALARIUBAZADataGridViewTextBoxColumn.Name = "sALARIUBAZADataGridViewTextBoxColumn";
+            // 
+            // sPORDataGridViewTextBoxColumn
+            // 
+            this.sPORDataGridViewTextBoxColumn.DataPropertyName = "SPOR";
+            this.sPORDataGridViewTextBoxColumn.HeaderText = "SPOR";
+            this.sPORDataGridViewTextBoxColumn.Name = "sPORDataGridViewTextBoxColumn";
+            // 
+            // pREMIIBRUTEDataGridViewTextBoxColumn
+            // 
+            this.pREMIIBRUTEDataGridViewTextBoxColumn.DataPropertyName = "PREMII_BRUTE";
+            this.pREMIIBRUTEDataGridViewTextBoxColumn.HeaderText = "PREMII_BRUTE";
+            this.pREMIIBRUTEDataGridViewTextBoxColumn.Name = "pREMIIBRUTEDataGridViewTextBoxColumn";
+            // 
+            // rETINERIDataGridViewTextBoxColumn
+            // 
+            this.rETINERIDataGridViewTextBoxColumn.DataPropertyName = "RETINERI";
+            this.rETINERIDataGridViewTextBoxColumn.HeaderText = "RETINERI";
+            this.rETINERIDataGridViewTextBoxColumn.Name = "rETINERIDataGridViewTextBoxColumn";
+            // 
+            // TOTAL_BRUT
+            // 
+            this.TOTAL_BRUT.DataPropertyName = "TOTAL_BRUT";
+            this.TOTAL_BRUT.HeaderText = "TOTAL_BRUT";
+            this.TOTAL_BRUT.Name = "TOTAL_BRUT";
+            this.TOTAL_BRUT.ReadOnly = true;
+            // 
+            // BRUT_IMPOZABIL
+            // 
+            this.BRUT_IMPOZABIL.DataPropertyName = "BRUT_IMPOZABIL";
+            this.BRUT_IMPOZABIL.HeaderText = "BRUT_IMPOZABIL";
+            this.BRUT_IMPOZABIL.Name = "BRUT_IMPOZABIL";
+            this.BRUT_IMPOZABIL.ReadOnly = true;
+            // 
+            // IMPOZIT
+            // 
+            this.IMPOZIT.DataPropertyName = "IMPOZIT";
+            this.IMPOZIT.HeaderText = "IMPOZIT";
+            this.IMPOZIT.Name = "IMPOZIT";
+            this.IMPOZIT.ReadOnly = true;
+            // 
+            // CAS
+            // 
+            this.CAS.DataPropertyName = "CAS";
+            this.CAS.HeaderText = "CAS";
+            this.CAS.Name = "CAS";
+            this.CAS.ReadOnly = true;
+            // 
+            // CASS
+            // 
+            this.CASS.DataPropertyName = "CASS";
+            this.CASS.HeaderText = "CASS";
+            this.CASS.Name = "CASS";
+            this.CASS.ReadOnly = true;
+            // 
+            // VIRAT_CARD
+            // 
+            this.VIRAT_CARD.DataPropertyName = "VIRAT_CARD";
+            this.VIRAT_CARD.HeaderText = "VIRAT_CARD";
+            this.VIRAT_CARD.Name = "VIRAT_CARD";
+            this.VIRAT_CARD.ReadOnly = true;
             // 
             // tabPage6
             // 
@@ -861,130 +962,6 @@
             this.tabPage8.Text = "Stergere angajati";
             this.tabPage8.UseVisualStyleBackColor = true;
             // 
-            // bindingNavigator2
-            // 
-            this.bindingNavigator2.AddNewItem = this.bindingNavigatorAddNewItem1;
-            this.bindingNavigator2.CountItem = this.bindingNavigatorCountItem1;
-            this.bindingNavigator2.DeleteItem = this.bindingNavigatorDeleteItem1;
-            this.bindingNavigator2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.bindingNavigatorMoveFirstItem1,
-            this.bindingNavigatorMovePreviousItem1,
-            this.bindingNavigatorSeparator3,
-            this.bindingNavigatorPositionItem1,
-            this.bindingNavigatorCountItem1,
-            this.bindingNavigatorSeparator4,
-            this.bindingNavigatorMoveNextItem1,
-            this.bindingNavigatorMoveLastItem1,
-            this.bindingNavigatorSeparator5,
-            this.bindingNavigatorAddNewItem1,
-            this.bindingNavigatorDeleteItem1,
-            this.toolStripButton3});
-            this.bindingNavigator2.Location = new System.Drawing.Point(0, 0);
-            this.bindingNavigator2.MoveFirstItem = this.bindingNavigatorMoveFirstItem1;
-            this.bindingNavigator2.MoveLastItem = this.bindingNavigatorMoveLastItem1;
-            this.bindingNavigator2.MoveNextItem = this.bindingNavigatorMoveNextItem1;
-            this.bindingNavigator2.MovePreviousItem = this.bindingNavigatorMovePreviousItem1;
-            this.bindingNavigator2.Name = "bindingNavigator2";
-            this.bindingNavigator2.PositionItem = this.bindingNavigatorPositionItem1;
-            this.bindingNavigator2.Size = new System.Drawing.Size(1071, 25);
-            this.bindingNavigator2.TabIndex = 7;
-            this.bindingNavigator2.Text = "bindingNavigator2";
-            // 
-            // bindingNavigatorAddNewItem1
-            // 
-            this.bindingNavigatorAddNewItem1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem1.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem1.Image")));
-            this.bindingNavigatorAddNewItem1.Name = "bindingNavigatorAddNewItem1";
-            this.bindingNavigatorAddNewItem1.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem1.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorAddNewItem1.Text = "Add new";
-            // 
-            // bindingNavigatorCountItem1
-            // 
-            this.bindingNavigatorCountItem1.Name = "bindingNavigatorCountItem1";
-            this.bindingNavigatorCountItem1.Size = new System.Drawing.Size(35, 22);
-            this.bindingNavigatorCountItem1.Text = "of {0}";
-            this.bindingNavigatorCountItem1.ToolTipText = "Total number of items";
-            // 
-            // bindingNavigatorDeleteItem1
-            // 
-            this.bindingNavigatorDeleteItem1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem1.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem1.Image")));
-            this.bindingNavigatorDeleteItem1.Name = "bindingNavigatorDeleteItem1";
-            this.bindingNavigatorDeleteItem1.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem1.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorDeleteItem1.Text = "Delete";
-            // 
-            // bindingNavigatorMoveFirstItem1
-            // 
-            this.bindingNavigatorMoveFirstItem1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveFirstItem1.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem1.Image")));
-            this.bindingNavigatorMoveFirstItem1.Name = "bindingNavigatorMoveFirstItem1";
-            this.bindingNavigatorMoveFirstItem1.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem1.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveFirstItem1.Text = "Move first";
-            // 
-            // bindingNavigatorMovePreviousItem1
-            // 
-            this.bindingNavigatorMovePreviousItem1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMovePreviousItem1.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem1.Image")));
-            this.bindingNavigatorMovePreviousItem1.Name = "bindingNavigatorMovePreviousItem1";
-            this.bindingNavigatorMovePreviousItem1.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem1.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMovePreviousItem1.Text = "Move previous";
-            // 
-            // bindingNavigatorSeparator3
-            // 
-            this.bindingNavigatorSeparator3.Name = "bindingNavigatorSeparator3";
-            this.bindingNavigatorSeparator3.Size = new System.Drawing.Size(6, 25);
-            // 
-            // bindingNavigatorPositionItem1
-            // 
-            this.bindingNavigatorPositionItem1.AccessibleName = "Position";
-            this.bindingNavigatorPositionItem1.AutoSize = false;
-            this.bindingNavigatorPositionItem1.Name = "bindingNavigatorPositionItem1";
-            this.bindingNavigatorPositionItem1.Size = new System.Drawing.Size(50, 23);
-            this.bindingNavigatorPositionItem1.Text = "0";
-            this.bindingNavigatorPositionItem1.ToolTipText = "Current position";
-            // 
-            // bindingNavigatorSeparator4
-            // 
-            this.bindingNavigatorSeparator4.Name = "bindingNavigatorSeparator4";
-            this.bindingNavigatorSeparator4.Size = new System.Drawing.Size(6, 25);
-            // 
-            // bindingNavigatorMoveNextItem1
-            // 
-            this.bindingNavigatorMoveNextItem1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveNextItem1.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem1.Image")));
-            this.bindingNavigatorMoveNextItem1.Name = "bindingNavigatorMoveNextItem1";
-            this.bindingNavigatorMoveNextItem1.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem1.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveNextItem1.Text = "Move next";
-            // 
-            // bindingNavigatorMoveLastItem1
-            // 
-            this.bindingNavigatorMoveLastItem1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveLastItem1.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem1.Image")));
-            this.bindingNavigatorMoveLastItem1.Name = "bindingNavigatorMoveLastItem1";
-            this.bindingNavigatorMoveLastItem1.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem1.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveLastItem1.Text = "Move last";
-            // 
-            // bindingNavigatorSeparator5
-            // 
-            this.bindingNavigatorSeparator5.Name = "bindingNavigatorSeparator5";
-            this.bindingNavigatorSeparator5.Size = new System.Drawing.Size(6, 25);
-            // 
-            // toolStripButton3
-            // 
-            this.toolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
-            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton3.Text = "toolStripButton3";
-            this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
-            // 
             // mesajCautareStergere
             // 
             this.mesajCautareStergere.AutoSize = true;
@@ -1039,6 +1016,7 @@
             // 
             // stergereDataGridView
             // 
+            this.stergereDataGridView.AllowUserToAddRows = false;
             this.stergereDataGridView.AutoGenerateColumns = false;
             this.stergereDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.stergereDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -1058,6 +1036,7 @@
             this.stergereDataGridView.DataSource = this.stergereBindingSource;
             this.stergereDataGridView.Location = new System.Drawing.Point(3, 40);
             this.stergereDataGridView.Name = "stergereDataGridView";
+            this.stergereDataGridView.ReadOnly = true;
             this.stergereDataGridView.Size = new System.Drawing.Size(872, 276);
             this.stergereDataGridView.TabIndex = 0;
             // 
@@ -1066,78 +1045,91 @@
             this.nUMEDataGridViewTextBoxColumn1.DataPropertyName = "NUME";
             this.nUMEDataGridViewTextBoxColumn1.HeaderText = "NUME";
             this.nUMEDataGridViewTextBoxColumn1.Name = "nUMEDataGridViewTextBoxColumn1";
+            this.nUMEDataGridViewTextBoxColumn1.ReadOnly = true;
             // 
             // pRENUMEDataGridViewTextBoxColumn1
             // 
             this.pRENUMEDataGridViewTextBoxColumn1.DataPropertyName = "PRENUME";
             this.pRENUMEDataGridViewTextBoxColumn1.HeaderText = "PRENUME";
             this.pRENUMEDataGridViewTextBoxColumn1.Name = "pRENUMEDataGridViewTextBoxColumn1";
+            this.pRENUMEDataGridViewTextBoxColumn1.ReadOnly = true;
             // 
             // fUNCTIEDataGridViewTextBoxColumn1
             // 
             this.fUNCTIEDataGridViewTextBoxColumn1.DataPropertyName = "FUNCTIE";
             this.fUNCTIEDataGridViewTextBoxColumn1.HeaderText = "FUNCTIE";
             this.fUNCTIEDataGridViewTextBoxColumn1.Name = "fUNCTIEDataGridViewTextBoxColumn1";
+            this.fUNCTIEDataGridViewTextBoxColumn1.ReadOnly = true;
             // 
             // sALARIUBAZADataGridViewTextBoxColumn1
             // 
             this.sALARIUBAZADataGridViewTextBoxColumn1.DataPropertyName = "SALARIU_BAZA";
             this.sALARIUBAZADataGridViewTextBoxColumn1.HeaderText = "SALARIU_BAZA";
             this.sALARIUBAZADataGridViewTextBoxColumn1.Name = "sALARIUBAZADataGridViewTextBoxColumn1";
+            this.sALARIUBAZADataGridViewTextBoxColumn1.ReadOnly = true;
             // 
             // sPORDataGridViewTextBoxColumn1
             // 
             this.sPORDataGridViewTextBoxColumn1.DataPropertyName = "SPOR";
             this.sPORDataGridViewTextBoxColumn1.HeaderText = "SPOR";
             this.sPORDataGridViewTextBoxColumn1.Name = "sPORDataGridViewTextBoxColumn1";
+            this.sPORDataGridViewTextBoxColumn1.ReadOnly = true;
             // 
             // pREMIIBRUTEDataGridViewTextBoxColumn1
             // 
             this.pREMIIBRUTEDataGridViewTextBoxColumn1.DataPropertyName = "PREMII_BRUTE";
             this.pREMIIBRUTEDataGridViewTextBoxColumn1.HeaderText = "PREMII_BRUTE";
             this.pREMIIBRUTEDataGridViewTextBoxColumn1.Name = "pREMIIBRUTEDataGridViewTextBoxColumn1";
+            this.pREMIIBRUTEDataGridViewTextBoxColumn1.ReadOnly = true;
             // 
             // tOTALBRUTDataGridViewTextBoxColumn
             // 
             this.tOTALBRUTDataGridViewTextBoxColumn.DataPropertyName = "TOTAL_BRUT";
             this.tOTALBRUTDataGridViewTextBoxColumn.HeaderText = "TOTAL_BRUT";
             this.tOTALBRUTDataGridViewTextBoxColumn.Name = "tOTALBRUTDataGridViewTextBoxColumn";
+            this.tOTALBRUTDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // bRUTIMPOZABILDataGridViewTextBoxColumn
             // 
             this.bRUTIMPOZABILDataGridViewTextBoxColumn.DataPropertyName = "BRUT_IMPOZABIL";
             this.bRUTIMPOZABILDataGridViewTextBoxColumn.HeaderText = "BRUT_IMPOZABIL";
             this.bRUTIMPOZABILDataGridViewTextBoxColumn.Name = "bRUTIMPOZABILDataGridViewTextBoxColumn";
+            this.bRUTIMPOZABILDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // iMPOZITDataGridViewTextBoxColumn
             // 
             this.iMPOZITDataGridViewTextBoxColumn.DataPropertyName = "IMPOZIT";
             this.iMPOZITDataGridViewTextBoxColumn.HeaderText = "IMPOZIT";
             this.iMPOZITDataGridViewTextBoxColumn.Name = "iMPOZITDataGridViewTextBoxColumn";
+            this.iMPOZITDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // cASDataGridViewTextBoxColumn
             // 
             this.cASDataGridViewTextBoxColumn.DataPropertyName = "CAS";
             this.cASDataGridViewTextBoxColumn.HeaderText = "CAS";
             this.cASDataGridViewTextBoxColumn.Name = "cASDataGridViewTextBoxColumn";
+            this.cASDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // cASSDataGridViewTextBoxColumn
             // 
             this.cASSDataGridViewTextBoxColumn.DataPropertyName = "CASS";
             this.cASSDataGridViewTextBoxColumn.HeaderText = "CASS";
             this.cASSDataGridViewTextBoxColumn.Name = "cASSDataGridViewTextBoxColumn";
+            this.cASSDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // rETINERIDataGridViewTextBoxColumn1
             // 
             this.rETINERIDataGridViewTextBoxColumn1.DataPropertyName = "RETINERI";
             this.rETINERIDataGridViewTextBoxColumn1.HeaderText = "RETINERI";
             this.rETINERIDataGridViewTextBoxColumn1.Name = "rETINERIDataGridViewTextBoxColumn1";
+            this.rETINERIDataGridViewTextBoxColumn1.ReadOnly = true;
             // 
             // vIRATCARDDataGridViewTextBoxColumn
             // 
             this.vIRATCARDDataGridViewTextBoxColumn.DataPropertyName = "VIRAT_CARD";
             this.vIRATCARDDataGridViewTextBoxColumn.HeaderText = "VIRAT_CARD";
             this.vIRATCARDDataGridViewTextBoxColumn.Name = "vIRATCARDDataGridViewTextBoxColumn";
+            this.vIRATCARDDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // stergereBindingSource
             // 
@@ -1423,6 +1415,7 @@
             // 
             // tabPage10
             // 
+            this.tabPage10.Controls.Add(this.button1);
             this.tabPage10.Location = new System.Drawing.Point(4, 22);
             this.tabPage10.Name = "tabPage10";
             this.tabPage10.Padding = new System.Windows.Forms.Padding(3);
@@ -1430,6 +1423,16 @@
             this.tabPage10.TabIndex = 0;
             this.tabPage10.Text = "Stat plata";
             this.tabPage10.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(27, 42);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(166, 36);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "Generare raport";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // tabPage11
             // 
@@ -1547,110 +1550,113 @@
             // 
             this.stergereTableAdapter.ClearBeforeFill = true;
             // 
-            // actualizareBindingSource
-            // 
-            this.actualizareBindingSource.DataMember = "Salarii";
-            this.actualizareBindingSource.DataSource = this.angajatiDataSet;
-            // 
-            // angajatiDataSet
-            // 
-            this.angajatiDataSet.DataSetName = "AngajatiDataSet";
-            this.angajatiDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // actualizareTableAdapter
             // 
             this.actualizareTableAdapter.ClearBeforeFill = true;
             // 
-            // ID
+            // bindingNavigatorMoveFirstItem1
             // 
-            this.ID.DataPropertyName = "ID";
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
+            this.bindingNavigatorMoveFirstItem1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveFirstItem1.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem1.Image")));
+            this.bindingNavigatorMoveFirstItem1.Name = "bindingNavigatorMoveFirstItem1";
+            this.bindingNavigatorMoveFirstItem1.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveFirstItem1.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveFirstItem1.Text = "Move first";
             // 
-            // nUMEDataGridViewTextBoxColumn
+            // bindingNavigatorMovePreviousItem1
             // 
-            this.nUMEDataGridViewTextBoxColumn.DataPropertyName = "NUME";
-            this.nUMEDataGridViewTextBoxColumn.HeaderText = "NUME";
-            this.nUMEDataGridViewTextBoxColumn.Name = "nUMEDataGridViewTextBoxColumn";
+            this.bindingNavigatorMovePreviousItem1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMovePreviousItem1.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem1.Image")));
+            this.bindingNavigatorMovePreviousItem1.Name = "bindingNavigatorMovePreviousItem1";
+            this.bindingNavigatorMovePreviousItem1.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMovePreviousItem1.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMovePreviousItem1.Text = "Move previous";
             // 
-            // pRENUMEDataGridViewTextBoxColumn
+            // bindingNavigatorSeparator3
             // 
-            this.pRENUMEDataGridViewTextBoxColumn.DataPropertyName = "PRENUME";
-            this.pRENUMEDataGridViewTextBoxColumn.HeaderText = "PRENUME";
-            this.pRENUMEDataGridViewTextBoxColumn.Name = "pRENUMEDataGridViewTextBoxColumn";
+            this.bindingNavigatorSeparator3.Name = "bindingNavigatorSeparator3";
+            this.bindingNavigatorSeparator3.Size = new System.Drawing.Size(6, 25);
             // 
-            // fUNCTIEDataGridViewTextBoxColumn
+            // bindingNavigatorPositionItem1
             // 
-            this.fUNCTIEDataGridViewTextBoxColumn.DataPropertyName = "FUNCTIE";
-            this.fUNCTIEDataGridViewTextBoxColumn.HeaderText = "FUNCTIE";
-            this.fUNCTIEDataGridViewTextBoxColumn.Name = "fUNCTIEDataGridViewTextBoxColumn";
+            this.bindingNavigatorPositionItem1.AccessibleName = "Position";
+            this.bindingNavigatorPositionItem1.AutoSize = false;
+            this.bindingNavigatorPositionItem1.Name = "bindingNavigatorPositionItem1";
+            this.bindingNavigatorPositionItem1.Size = new System.Drawing.Size(50, 23);
+            this.bindingNavigatorPositionItem1.Text = "0";
+            this.bindingNavigatorPositionItem1.ToolTipText = "Current position";
             // 
-            // sALARIUBAZADataGridViewTextBoxColumn
+            // bindingNavigatorCountItem1
             // 
-            this.sALARIUBAZADataGridViewTextBoxColumn.DataPropertyName = "SALARIU_BAZA";
-            this.sALARIUBAZADataGridViewTextBoxColumn.HeaderText = "SALARIU_BAZA";
-            this.sALARIUBAZADataGridViewTextBoxColumn.Name = "sALARIUBAZADataGridViewTextBoxColumn";
+            this.bindingNavigatorCountItem1.Name = "bindingNavigatorCountItem1";
+            this.bindingNavigatorCountItem1.Size = new System.Drawing.Size(35, 22);
+            this.bindingNavigatorCountItem1.Text = "of {0}";
+            this.bindingNavigatorCountItem1.ToolTipText = "Total number of items";
             // 
-            // sPORDataGridViewTextBoxColumn
+            // bindingNavigatorSeparator4
             // 
-            this.sPORDataGridViewTextBoxColumn.DataPropertyName = "SPOR";
-            this.sPORDataGridViewTextBoxColumn.HeaderText = "SPOR";
-            this.sPORDataGridViewTextBoxColumn.Name = "sPORDataGridViewTextBoxColumn";
+            this.bindingNavigatorSeparator4.Name = "bindingNavigatorSeparator4";
+            this.bindingNavigatorSeparator4.Size = new System.Drawing.Size(6, 25);
             // 
-            // pREMIIBRUTEDataGridViewTextBoxColumn
+            // bindingNavigatorMoveNextItem1
             // 
-            this.pREMIIBRUTEDataGridViewTextBoxColumn.DataPropertyName = "PREMII_BRUTE";
-            this.pREMIIBRUTEDataGridViewTextBoxColumn.HeaderText = "PREMII_BRUTE";
-            this.pREMIIBRUTEDataGridViewTextBoxColumn.Name = "pREMIIBRUTEDataGridViewTextBoxColumn";
+            this.bindingNavigatorMoveNextItem1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveNextItem1.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem1.Image")));
+            this.bindingNavigatorMoveNextItem1.Name = "bindingNavigatorMoveNextItem1";
+            this.bindingNavigatorMoveNextItem1.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveNextItem1.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveNextItem1.Text = "Move next";
             // 
-            // rETINERIDataGridViewTextBoxColumn
+            // bindingNavigatorMoveLastItem1
             // 
-            this.rETINERIDataGridViewTextBoxColumn.DataPropertyName = "RETINERI";
-            this.rETINERIDataGridViewTextBoxColumn.HeaderText = "RETINERI";
-            this.rETINERIDataGridViewTextBoxColumn.Name = "rETINERIDataGridViewTextBoxColumn";
+            this.bindingNavigatorMoveLastItem1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveLastItem1.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem1.Image")));
+            this.bindingNavigatorMoveLastItem1.Name = "bindingNavigatorMoveLastItem1";
+            this.bindingNavigatorMoveLastItem1.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveLastItem1.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveLastItem1.Text = "Move last";
             // 
-            // TOTAL_BRUT
+            // bindingNavigatorSeparator5
             // 
-            this.TOTAL_BRUT.DataPropertyName = "TOTAL_BRUT";
-            this.TOTAL_BRUT.HeaderText = "TOTAL_BRUT";
-            this.TOTAL_BRUT.Name = "TOTAL_BRUT";
-            this.TOTAL_BRUT.ReadOnly = true;
+            this.bindingNavigatorSeparator5.Name = "bindingNavigatorSeparator5";
+            this.bindingNavigatorSeparator5.Size = new System.Drawing.Size(6, 25);
             // 
-            // BRUT_IMPOZABIL
+            // toolStripButton3
             // 
-            this.BRUT_IMPOZABIL.DataPropertyName = "BRUT_IMPOZABIL";
-            this.BRUT_IMPOZABIL.HeaderText = "BRUT_IMPOZABIL";
-            this.BRUT_IMPOZABIL.Name = "BRUT_IMPOZABIL";
-            this.BRUT_IMPOZABIL.ReadOnly = true;
+            this.toolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
+            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton3.Name = "toolStripButton3";
+            this.toolStripButton3.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton3.Text = "toolStripButton3";
+            this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
             // 
-            // IMPOZIT
+            // bindingNavigator2
             // 
-            this.IMPOZIT.DataPropertyName = "IMPOZIT";
-            this.IMPOZIT.HeaderText = "IMPOZIT";
-            this.IMPOZIT.Name = "IMPOZIT";
-            this.IMPOZIT.ReadOnly = true;
-            // 
-            // CAS
-            // 
-            this.CAS.DataPropertyName = "CAS";
-            this.CAS.HeaderText = "CAS";
-            this.CAS.Name = "CAS";
-            this.CAS.ReadOnly = true;
-            // 
-            // CASS
-            // 
-            this.CASS.DataPropertyName = "CASS";
-            this.CASS.HeaderText = "CASS";
-            this.CASS.Name = "CASS";
-            this.CASS.ReadOnly = true;
-            // 
-            // VIRAT_CARD
-            // 
-            this.VIRAT_CARD.DataPropertyName = "VIRAT_CARD";
-            this.VIRAT_CARD.HeaderText = "VIRAT_CARD";
-            this.VIRAT_CARD.Name = "VIRAT_CARD";
-            this.VIRAT_CARD.ReadOnly = true;
+            this.bindingNavigator2.AddNewItem = null;
+            this.bindingNavigator2.CountItem = this.bindingNavigatorCountItem1;
+            this.bindingNavigator2.DeleteItem = null;
+            this.bindingNavigator2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.bindingNavigatorMoveFirstItem1,
+            this.bindingNavigatorMovePreviousItem1,
+            this.bindingNavigatorSeparator3,
+            this.bindingNavigatorPositionItem1,
+            this.bindingNavigatorCountItem1,
+            this.bindingNavigatorSeparator4,
+            this.bindingNavigatorMoveNextItem1,
+            this.bindingNavigatorMoveLastItem1,
+            this.bindingNavigatorSeparator5,
+            this.toolStripButton3});
+            this.bindingNavigator2.Location = new System.Drawing.Point(0, 0);
+            this.bindingNavigator2.MoveFirstItem = this.bindingNavigatorMoveFirstItem1;
+            this.bindingNavigator2.MoveLastItem = this.bindingNavigatorMoveLastItem1;
+            this.bindingNavigator2.MoveNextItem = this.bindingNavigatorMoveNextItem1;
+            this.bindingNavigator2.MovePreviousItem = this.bindingNavigatorMovePreviousItem1;
+            this.bindingNavigator2.Name = "bindingNavigator2";
+            this.bindingNavigator2.PositionItem = this.bindingNavigatorPositionItem1;
+            this.bindingNavigator2.Size = new System.Drawing.Size(1071, 25);
+            this.bindingNavigator2.TabIndex = 7;
+            this.bindingNavigator2.Text = "bindingNavigator2";
             // 
             // Form1
             // 
@@ -1675,14 +1681,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
             this.bindingNavigator1.ResumeLayout(false);
             this.bindingNavigator1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.actualizareBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.angajatiDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.updateDataGridView)).EndInit();
             this.tabPage6.ResumeLayout(false);
             this.tabPage6.PerformLayout();
             this.tabPage8.ResumeLayout(false);
             this.tabPage8.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator2)).EndInit();
-            this.bindingNavigator2.ResumeLayout(false);
-            this.bindingNavigator2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.stergereDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.stergereBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.angajatiDataSet1)).EndInit();
@@ -1696,10 +1701,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.angajatiDataSet2)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.tabControl3.ResumeLayout(false);
+            this.tabPage10.ResumeLayout(false);
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.actualizareBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.angajatiDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator2)).EndInit();
+            this.bindingNavigator2.ResumeLayout(false);
+            this.bindingNavigator2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1824,18 +1831,6 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
-        private System.Windows.Forms.BindingNavigator bindingNavigator2;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem1;
-        private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem1;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem1;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem1;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem1;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator3;
-        private System.Windows.Forms.ToolStripTextBox bindingNavigatorPositionItem1;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator4;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem1;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem1;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator5;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
         private System.Windows.Forms.BindingNavigator bindingNavigator3;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem2;
@@ -1847,7 +1842,6 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem2;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem2;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator8;
-        private System.Windows.Forms.ToolStripButton toolStripButton3;
         private System.Windows.Forms.Button actualizareAngajatButton;
         private System.Windows.Forms.Label mesajModificareProcente;
         private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
@@ -1868,6 +1862,18 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn CAS;
         private System.Windows.Forms.DataGridViewTextBoxColumn CASS;
         private System.Windows.Forms.DataGridViewTextBoxColumn VIRAT_CARD;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.BindingNavigator bindingNavigator2;
+        private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem1;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem1;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem1;
+        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator3;
+        private System.Windows.Forms.ToolStripTextBox bindingNavigatorPositionItem1;
+        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator4;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem1;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem1;
+        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator5;
+        private System.Windows.Forms.ToolStripButton toolStripButton3;
     }
 }
 
