@@ -56,12 +56,12 @@ namespace ExamenTPBD
         {
             if (tabControl2.SelectedTab == tabPage8)
             {
-                this.stergereTableAdapter.Fill(this.angajatiDataSet1.Salarii);
+              // this.stergereTableAdapter.Fill(this.angajatiDataSet1.Salarii);
 
             }
             if (tabControl2.SelectedTab == tabPage9)
             {
-                this.salariiTableAdapter.Fill(this.angajatiDataSet2.Salarii);
+              // this.salariiTableAdapter.Fill(this.angajatiDataSet2.Salarii);
 
             }
         }
@@ -71,7 +71,7 @@ namespace ExamenTPBD
         {
             if (tabControl4.SelectedTab == tabPage13)
             {
-                this.actualizareTableAdapter.Fill(this.angajatiDataSet.Salarii);
+             //  this.actualizareTableAdapter.Fill(this.angajatiDataSet.Salarii);
 
             }
         }
@@ -80,11 +80,11 @@ namespace ExamenTPBD
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'angajatiDataSet2.Salarii' table. You can move, or remove it, as needed.
+         
             this.salariiTableAdapter.Fill(this.angajatiDataSet2.Salarii);
-            // TODO: This line of code loads data into the 'angajatiDataSet1.Salarii' table. You can move, or remove it, as needed.
+         
             this.stergereTableAdapter.Fill(this.angajatiDataSet1.Salarii);
-            // TODO: This line of code loads data into the 'angajatiDataSet.Salarii' table. You can move, or remove it, as needed.
+
             this.actualizareTableAdapter.Fill(this.angajatiDataSet.Salarii);
             
         }
@@ -137,6 +137,14 @@ namespace ExamenTPBD
                         adaugaSalarText.Text = "";
                         adaugaRetineriText.Text = "";
                         adaugaPremiiText.Text = "";
+
+
+
+                        this.salariiTableAdapter.Fill(this.angajatiDataSet2.Salarii);
+
+                        this.stergereTableAdapter.Fill(this.angajatiDataSet1.Salarii);
+
+                        this.actualizareTableAdapter.Fill(this.angajatiDataSet.Salarii);
                     }
 
                 }
@@ -212,6 +220,11 @@ namespace ExamenTPBD
                 this.Validate();
                 actualizareBindingSource.EndEdit();
                 actualizareTableAdapter.Update(angajatiDataSet.Salarii);
+
+                this.salariiTableAdapter.Fill(this.angajatiDataSet2.Salarii);
+
+                this.stergereTableAdapter.Fill(this.angajatiDataSet1.Salarii);
+
                 this.actualizareTableAdapter.Fill(this.angajatiDataSet.Salarii);
             }
             catch (SqlException ex)
@@ -286,6 +299,11 @@ namespace ExamenTPBD
             {
                 stergereTableAdapter.Update(angajatiDataSet1.Salarii);
                 this.stergereTableAdapter.Fill(this.angajatiDataSet1.Salarii);
+
+                this.salariiTableAdapter.Fill(this.angajatiDataSet2.Salarii);
+
+
+                this.actualizareTableAdapter.Fill(this.angajatiDataSet.Salarii);
             }
             catch (SqlException ex)
             {
@@ -395,7 +413,12 @@ namespace ExamenTPBD
                         mesajModificareProcente.ForeColor = System.Drawing.Color.Red;
                         mesajModificareProcente.Text = "Modificarea nu s-a putut efectua! Conexiune esuata, incalcare constrangeri/ date eronate";
 
-                    }
+                    this.salariiTableAdapter.Fill(this.angajatiDataSet2.Salarii);
+
+                    this.stergereTableAdapter.Fill(this.angajatiDataSet1.Salarii);
+
+                    this.actualizareTableAdapter.Fill(this.angajatiDataSet.Salarii);
+                }
                     finally
                     {
                         getProcente();
@@ -548,6 +571,12 @@ namespace ExamenTPBD
                     if (mesaj_calcule_efectuate == true) {
                         this.salariiTableAdapter.Fill(this.angajatiDataSet2.Salarii);
                         MessageBox.Show("Calculele s-au efectuat cu succes!");
+
+                        this.salariiTableAdapter.Fill(this.angajatiDataSet2.Salarii);
+
+                        this.stergereTableAdapter.Fill(this.angajatiDataSet1.Salarii);
+
+                        this.actualizareTableAdapter.Fill(this.angajatiDataSet.Salarii);
                     }                    
                 }
                 catch {
